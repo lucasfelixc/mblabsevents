@@ -1,11 +1,11 @@
 import { Header } from 'components/Header'
-
-import { Container } from '../styles/Home'
+import { SearchBox } from 'components/SearchBox'
 
 export default function Home () {
   return (
-    <Container>
+    <div>
       <Header />
-    </Container>
+      <SearchBox />
+    </div>
   )
 }
