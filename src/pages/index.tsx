@@ -1,11 +1,13 @@
 import { Header } from 'components/Header'
-import { SearchBox } from 'components/SearchBox'
+import { Main } from 'components/Main'
 
-export default function Home () {
+import { Container } from '@styles/pages/Home'
+
+export default function LandingPage () {
   return (
-    <div>
+    <Container>
       <Header />
-      <SearchBox />
-    </div>
+      <Main />
+    </Container>
   )
 }

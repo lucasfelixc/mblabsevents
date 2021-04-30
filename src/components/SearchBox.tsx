@@ -7,7 +7,12 @@ export const SearchBox: React.FC = () => {
 
   return (
     <Container>
-      <input type="search" name="" id=""/>
+      <input
+        type="search"
+        name="searchEvent"
+        className="searchEvent"
+        placeholder="Pesquisar por eventos"
+      />
 
       <select name="type" id="typeOfEvent">
         <option value="default"> Tipo do evento</option>
