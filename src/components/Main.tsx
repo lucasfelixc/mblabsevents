@@ -1,8 +1,11 @@
 import { SearchBox } from './SearchBox'
+import { EventBox } from './EventBox'
 
 import { Container } from '@styles/components/Main'
 
 export const Main: React.FC = () => {
+  const showBoxs = true
+
   return (
     <Container>
       <div className="contentCall">
@@ -12,7 +15,8 @@ export const Main: React.FC = () => {
 
       <SearchBox />
 
-      <p>Quer encontrar algum evento? Preencha acima informações sobre ele.</p>
+      {!showBoxs && <p>Quer encontrar algum evento? Preencha acima informações sobre ele.</p>}
+      <EventBox />
     </Container>
   )
 }

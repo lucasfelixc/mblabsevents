@@ -25,9 +25,9 @@ export const SearchBox: React.FC = () => {
         <option value="default" selected>Estado do evento</option>
         <option value="allStates">Todos os estados</option>
 
-        {listOfState.map((value) => {
+        {listOfState.map((value, index) => {
           return (
-            <option value={value}>{value}</option>
+            <option value={value} key={index}>{value}</option>
           )
         })}
 
