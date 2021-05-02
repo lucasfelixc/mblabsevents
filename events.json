@@ -43,7 +43,7 @@
       "banner": null
     },
     {
-      "id_event": 1,
+      "id_event": 4,
       "title": "Desenvolvimento web em 2021",
       "description": "O centro de informática da Universidade promoverá um evento que terá como objetivo discutir sobre a ascenção dos desenvolvedores web em 2021 e o que é esperado dessa profissão nos próximos anos.",
       "start_date": "2021-04-30T09:00",
@@ -85,7 +85,7 @@
       "banner": null
     },
     {
-      "id_event": 1,
+      "id_event": 7,
       "title": "Desenvolvimento web em 2021",
       "description": "O centro de informática da Universidade promoverá um evento que terá como objetivo discutir sobre a ascenção dos desenvolvedores web em 2021 e o que é esperado dessa profissão nos próximos anos.",
       "start_date": "2021-04-30T09:00",

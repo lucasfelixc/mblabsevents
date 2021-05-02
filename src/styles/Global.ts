@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
-export default createGlobalStyle`
+interface GlobalProps {
+  indice: number
+}
+
+export default createGlobalStyle<GlobalProps>`
   * {
     margin: 0;
     padding: 0;
@@ -9,6 +13,7 @@ export default createGlobalStyle`
 
   body {
     background: ${props => props.theme.colors.gray50};
+    ${props => props.indice === 4 ? 'overflow: hidden' : 'overflow: scroll'}
   }
 
   body, input, textarea, button {

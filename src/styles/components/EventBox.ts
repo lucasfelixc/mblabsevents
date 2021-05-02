@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+interface ShowContainer {
+  show: boolean
+}
+
+export const Container = styled.div<ShowContainer>`
   width: 100%;
 
-  display: flex;
+  ${props => props.show ? `display: flex` : `display: none`};
   flex-direction: column;
   align-items: center;
 
@@ -11,7 +15,7 @@ export const Container = styled.div`
 
   .box {
     width: 89%;
-    height: 17rem;
+    height: auto;
     background: ${props => props.theme.colors.white};
 
     border-radius: 10px;
@@ -87,13 +91,26 @@ export const Container = styled.div`
 
     > p {
       width: 100%;
+      display: flex;
+      align-items: center;
 
       margin-top: 1rem;
+      margin-bottom: 2rem;
+
       padding-left: 1.5rem;
 
       text-transform: capitalize;
       font: 400 0.9rem Inter, sans-serif;
-      color: ${props => props.theme.colors.gray500}
+      color: ${props => props.theme.colors.gray500};
+
+      img {
+        padding-right: 1rem;
+      }
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
     }
   }
 `

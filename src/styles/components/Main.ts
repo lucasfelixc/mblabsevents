@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  display: flex;
+interface ShowDisplay {
+  isActiveDisplay: boolean;
+}
+
+export const Container = styled.div<ShowDisplay>`
+  ${props => props.isActiveDisplay ? `display: flex` : `display: none`};
   flex-direction: column;
   align-items: center;
 

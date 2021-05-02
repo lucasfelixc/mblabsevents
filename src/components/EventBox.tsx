@@ -4,16 +4,24 @@ import ptBR from 'date-fns/locale/pt-BR'
 import { Container } from '@styles/components/EventBox'
 
 import events from '../../events.json'
+import React, { useContext } from 'react'
+import { DetailsContext } from 'context/DetailsContext'
 
-export const EventBox: React.FC = () => {
+interface EventBoxShow {
+  show: boolean
+}
+
+export const EventBox: React.FC<EventBoxShow> = ({ show }) => {
+  const { changeIndice } = useContext(DetailsContext)
+
   const eventsData = events.data
 
   return (
-    <Container>
+    <Container show={show}>
 
       {eventsData.map((value, index) => {
         return (
-          <div className="box" key={index}>
+          <div className="box" key={index} onClick={() => changeIndice(value.id_event)}>
             <div className="wrapperBanner">
               <img src="/images/backgroundBox.png" alt="Centro de informática"/>
             </div>
@@ -26,6 +34,7 @@ export const EventBox: React.FC = () => {
             <h2>{value.title}</h2>
 
             <p>
+              <img src="/icons/calendar.svg" alt="Calendário"/>
               {
               `${format(new Date(value.start_date), "EEEEEE, d MMMM 'de' yyyy '-' HH:mm", {locale: ptBR})}`
               }
