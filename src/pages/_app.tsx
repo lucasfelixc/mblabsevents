@@ -26,7 +26,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <DetailsProvider indice={indice}>
           <Wrapper>
             <main>
-              <Header indice={indice}/>
+              <Header />
               <Component {...pageProps} />
               <GlobalStyle indice={indice}/>
             </main>
