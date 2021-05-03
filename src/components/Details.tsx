@@ -7,17 +7,21 @@ import ptBR from 'date-fns/locale/pt-BR'
 import { useContext } from 'react'
 
 export const Details: React.FC = () => {
-  const { indice } = useContext(DetailsContext)
+  const { indice, changeIndice } = useContext(DetailsContext)
 
   const currentDate = format(new Date(), 'EEEEEE, d MMMM', {
     locale: ptBR,
   })
 
+  function closeDetails() {
+    changeIndice(0)
+  }
+
   return (
     <Container indice={indice}>
       <Overlay>
         <header>
-          <button type="button" className="close">
+          <button type="button" className="close" onClick={closeDetails}>
             <img src="/icons/close.svg" alt="Fechar"/>
           </button>
           <img src="/images/backgroundBox.png" alt="Background"/>
