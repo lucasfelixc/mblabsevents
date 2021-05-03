@@ -21,7 +21,7 @@ export const EventBox: React.FC<EventBoxShow> = ({ show }) => {
 
       {eventsData.map((value, index) => {
         return (
-          <div className="box" key={index} onClick={() => changeIndice(value.id_event)}>
+          <div className="box" key={index} onClick={() => changeIndice(Number(value.id_event))}>
             <div className="wrapperBanner">
               <img src="/images/backgroundBox.png" alt="Centro de informática"/>
             </div>

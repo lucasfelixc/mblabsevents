@@ -21,7 +21,7 @@ export const Container = styled.div<ContainerProps>`
   justify-content: center;
   align-items: center;
 
-  ${props => props.indice === 4 ? 'display: flex;' : 'display: none;'}
+  ${props => props.indice != 0 ? 'display: flex;' : 'display: none;'}
 `
 
 export const Overlay = styled.div`

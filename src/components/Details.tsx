@@ -5,17 +5,15 @@ import format from 'date-fns/format'
 import ptBR from 'date-fns/locale/pt-BR'
 
 import { useContext } from 'react'
+import events from '../../events.json'
 
 export const Details: React.FC = () => {
-  const { indice, changeIndice } = useContext(DetailsContext)
+  const { indice, closeDetails } = useContext(DetailsContext)
+  const eventsData = events.data
 
   const currentDate = format(new Date(), 'EEEEEE, d MMMM', {
     locale: ptBR,
   })
-
-  function closeDetails() {
-    changeIndice(0)
-  }
 
   return (
     <Container indice={indice}>
@@ -30,23 +28,45 @@ export const Details: React.FC = () => {
 
         <main>
           <div className="title">
-            <h2>Desenvolvimento web em 2021</h2>
+            <h2>{eventsData.map((value, index) => {
+              if (value.id_event === indice) {
+                return value.title
+              }
+            })}</h2>
           </div>
 
           <div className="date">
             <div className="day">
               <img src="/icons/calendar.svg" alt="Calendário"/>
-              {currentDate}
+              {eventsData.map((value, index) => {
+                if (value.id_event === indice) {
+                  return format(new Date(value.start_date), 'EEEEEE, d MMMM', {
+                    locale: ptBR,
+                  })
+                }
+              })}
             </div>
             <div className="hours">
               <img src="/icons/clock.svg" alt="Relógio"/>
-              09:00
+              {eventsData.map((value, index) => {
+                if (value.id_event === indice) {
+                  return format(new Date(value.start_date), 'HH:mm', {
+                    locale: ptBR,
+                  })
+                }
+              })}
             </div>
           </div>
 
           <div className="description">
             <strong>Descrição</strong>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo culpa consectetur amet? Rerum accusantium numquam nostrum cupiditate, quae alias! Cum, dolorum! Ut suscipit ab error libero asperiores ipsa, maxime corporis.</p>
+            <p>
+              {eventsData.map((value, index) => {
+                if (value.id_event === indice) {
+                  return value.description
+                }
+              })}
+            </p>
           </div>
         </main>
 

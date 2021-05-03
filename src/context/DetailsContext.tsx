@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 
 import events from '../../events.json'
 
@@ -20,6 +20,7 @@ interface EventsDataTypes {
 interface DetailsContextData {
   indice: number;
   changeIndice: (index: number) => void;
+  closeDetails: () => void;
 }
 
 interface DetailsProviderProps {
@@ -38,8 +39,18 @@ export function DetailsProvider({ children }: DetailsProviderProps) {
     console.log('Cheguei no contexto')
   }
 
+  function closeDetails() {
+    setIndice(0)
+  }
+
   return (
-    <DetailsContext.Provider value={{indice, changeIndice}}>
+    <DetailsContext.Provider
+      value={{
+        indice,
+        changeIndice,
+        closeDetails
+      }}
+    >
       {children}
     </DetailsContext.Provider>
   )
