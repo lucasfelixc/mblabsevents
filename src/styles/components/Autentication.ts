@@ -3,45 +3,53 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 
-  padding-left: 3rem;
-  margin-top: 4rem;
+  .title {
+    width: 100%;
+    text-align: start;
+    padding: 0 1rem 0 1.5rem;
+    margin-top: 1.5rem;
 
-  > h1 {
-    font: 800 2.7rem Lexend, sans-serif;
-    color: ${props => props.theme.colors.white};
-  }
-
-  .contentCall {
-    display: flex;
-    align-items: center;
-
-    margin: 6rem 0 2rem 0;
-
-    > span {
-      font: 400 1.1rem Inter, sans-serif;
-      color: ${props => props.theme.colors.gray50};
-
-      width: 14rem;
-
-      padding-left: 1.5rem;
+    h1 {
+      font: 600 1.2rem Lexend, sans-serif;
+      color: ${props => props.theme.colors.purple500};
     }
   }
 
-  > button {
-    width: 90%;
-    height: 3rem;
+  .padlock {
+    margin: 3rem 0 1.5rem 0;
+  }
 
+  .optionsAuth {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
 
-    color: ${props => props.theme.colors.gray50};
+    width: 100%;
 
-    border-radius: 5px;
-    border: none;
+    span {
+      color: ${props => props.theme.colors.gray200};
+    }
 
-    background: linear-gradient(90deg, #6538CD 0%, rgba(101, 56, 205, 0) 100%);
+    button {
+      width: 70%;
+      height: 3.8rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      background: linear-gradient(90deg, #E6E8EB 0%, rgba(247, 248, 250, 0) 100%);
+
+      border: none;
+      border-radius: 5px;
+
+      margin: 1.75rem 0;
+
+      img {
+        width: 20px;
+      }
+    }
   }
 `

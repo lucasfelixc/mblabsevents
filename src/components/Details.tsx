@@ -1,19 +1,17 @@
-import { Container, Overlay } from '@styles/components/Details'
-import { DetailsContext } from 'context/DetailsContext'
+import { useContext } from 'react'
+import Link from 'next/link'
 
 import format from 'date-fns/format'
 import ptBR from 'date-fns/locale/pt-BR'
 
-import { useContext } from 'react'
+import { Container, Overlay } from '@styles/components/Details'
+import { DetailsContext } from 'context/DetailsContext'
+
 import events from '../../events.json'
 
 export const Details: React.FC = () => {
   const { indice, closeDetails } = useContext(DetailsContext)
   const eventsData = events.data
-
-  const currentDate = format(new Date(), 'EEEEEE, d MMMM', {
-    locale: ptBR,
-  })
 
   return (
     <Container indice={indice}>
@@ -28,7 +26,7 @@ export const Details: React.FC = () => {
 
         <main>
           <div className="title">
-            <h2>{eventsData.map((value, index) => {
+            <h2>{eventsData.map((value) => {
               if (value.id_event === indice) {
                 return value.title
               }
@@ -38,7 +36,7 @@ export const Details: React.FC = () => {
           <div className="date">
             <div className="day">
               <img src="/icons/calendar.svg" alt="Calendário"/>
-              {eventsData.map((value, index) => {
+              {eventsData.map((value) => {
                 if (value.id_event === indice) {
                   return format(new Date(value.start_date), 'EEEEEE, d MMMM', {
                     locale: ptBR,
@@ -48,7 +46,7 @@ export const Details: React.FC = () => {
             </div>
             <div className="hours">
               <img src="/icons/clock.svg" alt="Relógio"/>
-              {eventsData.map((value, index) => {
+              {eventsData.map((value) => {
                 if (value.id_event === indice) {
                   return format(new Date(value.start_date), 'HH:mm', {
                     locale: ptBR,
@@ -61,7 +59,7 @@ export const Details: React.FC = () => {
           <div className="description">
             <strong>Descrição</strong>
             <p>
-              {eventsData.map((value, index) => {
+              {eventsData.map((value) => {
                 if (value.id_event === indice) {
                   return value.description
                 }
@@ -71,9 +69,11 @@ export const Details: React.FC = () => {
         </main>
 
         <footer>
-          <button type="button">
-            Participar
-          </button>
+          <Link href="authPage">
+            <button type="button" onClick={closeDetails}>
+              Participar
+            </button>
+          </Link>
         </footer>
       </Overlay>
     </Container>

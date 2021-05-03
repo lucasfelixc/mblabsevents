@@ -1,19 +1,42 @@
+import { GoogleLogin } from 'react-google-login'
+
 import { Container } from '@styles/components/Autentication'
 
 export const Autentication: React.FC = () => {
+  function responseGoogle(response: object) {
+    console.log(response)
+  }
+
   return (
     <Container>
-      <h1>Bem vindo</h1>
-
-      <div className="contentCall">
-        <img src="/icons/google.svg" alt="Google"/>
-        <span>Faça login com sua conta do gmail</span>
+      <div className="title">
+        <h1>Para garantir sua vaga no evento é necessário que se identifique</h1>
       </div>
 
-      <button type="button">
-        Continuar com o google
-        <img src="/icons/arrowRight.svg" alt="Avançar"/>
-      </button>
+      <div className="padlock">
+        <img src="/icons/padlock.svg" alt="Cadeado"/>
+      </div>
+
+      <div className="optionsAuth">
+        <span>Continue com</span>
+        <GoogleLogin
+          clientId="CLIENT_ID"
+          onSuccess={responseGoogle}
+          onFailure={responseGoogle}
+          // cookiePolicy={'single-host-origin'}
+        >
+          <img src="/icons/google.svg" alt="Google"/>
+          Google
+          <img src="/icons/littleArrow.svg" alt="Avançar"/>
+        </GoogleLogin>
+
+        <span>ou</span>
+        <button type="button">
+          <img src="/icons/apple.svg" alt="Apple"/>
+          Apple
+          <img src="/icons/littleArrow.svg" alt="Avançar"/>
+        </button>
+      </div>
     </Container>
   )
 }
