@@ -20,7 +20,7 @@ export const Autentication: React.FC = () => {
       <div className="optionsAuth">
         <span>Continue com</span>
         <GoogleLogin
-          clientId="CLIENT_ID"
+          clientId="107644619120-tpmhup4v0qjc4iot559vfpivhc44pk91.apps.googleusercontent.com"
           onSuccess={responseGoogle}
           onFailure={responseGoogle}
           // cookiePolicy={'single-host-origin'}
