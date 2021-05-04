@@ -1,3 +1,5 @@
+require('dotenv/config');
+
 import { NextApiRequest, NextApiResponse } from 'next'
 import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
