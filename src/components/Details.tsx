@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import Link from 'next/link'
+import { useSession } from 'next-auth/client'
 
 import format from 'date-fns/format'
 import ptBR from 'date-fns/locale/pt-BR'
@@ -10,6 +11,7 @@ import { DetailsContext } from 'context/DetailsContext'
 import events from '../../events.json'
 
 export const Details: React.FC = () => {
+  const [ session ] = useSession()
   const { indice, closeDetails } = useContext(DetailsContext)
   const eventsData = events.data
 
@@ -69,11 +71,20 @@ export const Details: React.FC = () => {
         </main>
 
         <footer>
-          <Link href="authPage">
-            <button type="button" onClick={closeDetails}>
-              Participar
-            </button>
-          </Link>
+          {!session &&
+            <Link href="authPage">
+              <button type="button" onClick={closeDetails}>
+                Participar
+              </button>
+            </Link>
+          }
+          {session &&
+            <Link href="payment">
+              <button type="button" onClick={closeDetails}>
+                Participar
+              </button>
+            </Link>
+          }
         </footer>
       </Overlay>
     </Container>

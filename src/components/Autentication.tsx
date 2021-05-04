@@ -1,11 +1,10 @@
-import { GoogleLogin } from 'react-google-login'
+// import { GoogleLogin } from 'react-google-login'
+import { signIn, signOut, useSession, SignInResponse } from 'next-auth/client'
 
 import { Container } from '@styles/components/Autentication'
 
 export const Autentication: React.FC = () => {
-  function responseGoogle(response: object) {
-    console.log(response)
-  }
+  const [ session ] = useSession()
 
   return (
     <Container>
@@ -18,24 +17,34 @@ export const Autentication: React.FC = () => {
       </div>
 
       <div className="optionsAuth">
-        <span>Continue com</span>
+        {/* <span>Continue com</span>
         <GoogleLogin
           clientId="107644619120-tpmhup4v0qjc4iot559vfpivhc44pk91.apps.googleusercontent.com"
           onSuccess={responseGoogle}
           onFailure={responseGoogle}
-          // cookiePolicy={'single-host-origin'}
+          buttonText=""
+          className="loginGoogle"
+          icon={false}
         >
-          <img src="/icons/google.svg" alt="Google"/>
-          Google
-          <img src="/icons/littleArrow.svg" alt="Avançar"/>
+
         </GoogleLogin>
 
         <span>ou</span>
-        <button type="button">
+        <button type="button" className="loginApple">
           <img src="/icons/apple.svg" alt="Apple"/>
           Apple
           <img src="/icons/littleArrow.svg" alt="Avançar"/>
-        </button>
+        </button> */}
+        {!session && <>
+          <span>Continue com</span>
+          <button onClick={() => {
+            signIn("google", {callbackUrl: 'http://localhost:3000/payment'})
+          }}>
+            <img src="/icons/google.svg" alt="Google"/>
+            Google
+            <img src="/icons/littleArrow.svg" alt="Avançar"/>
+          </button>
+        </>}
       </div>
     </Container>
   )

@@ -8,6 +8,8 @@ import theme from '../styles/Theme'
 import { Container, Wrapper } from '@styles/App'
 
 import { DetailsContext, DetailsProvider } from '../context/DetailsContext'
+import { Provider } from 'next-auth/client'
+
 import { Header } from 'components/Header'
 import { Details } from 'components/Details'
 import { useContext } from 'react'
@@ -21,18 +23,21 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <title>MB Labs Events</title>
       </Head>
 
+
       <ThemeProvider theme={theme}>
 
-        <DetailsProvider indice={indice}>
-          <Wrapper>
-            <main>
-              <Header />
-              <Component {...pageProps} />
-              <GlobalStyle indice={indice}/>
-            </main>
-            <Details />
-          </Wrapper>
-        </DetailsProvider>
+        <Provider session={pageProps.session}>
+          <DetailsProvider indice={indice}>
+            <Wrapper>
+              <main>
+                <Header />
+                <Component {...pageProps} />
+                <GlobalStyle indice={indice}/>
+              </main>
+              <Details />
+            </Wrapper>
+          </DetailsProvider>
+        </Provider>
 
       </ThemeProvider>
     </Container>
