@@ -24,6 +24,16 @@ export const Container = styled.div<ShowDisplay>`
       font-size: 0.9rem;
       padding-top: 0.5rem;
     }
+
+    @media(min-width: 600px) {
+      > h1 {
+        font-size: 2.5rem;
+      }
+
+      > p {
+        font-size: 1.1rem;
+      }
+    }
   }
 
   > p {
@@ -31,5 +41,11 @@ export const Container = styled.div<ShowDisplay>`
 
     width: 85%;
     margin-top: 2rem;
+  }
+
+  @media(min-width: 1025px) {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 90vh;
   }
 `

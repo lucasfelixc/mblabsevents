@@ -25,4 +25,19 @@ export const Container = styled.div`
     font-size: 0.8rem;
     color: ${props => props.theme.colors.gray200};
   }
+
+  @media(min-width: 600px) {
+    img {
+      width: 11.25rem;
+      height: 3.21rem;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  @media(min-width: 1025px) {
+    height: 10vh;
+  }
 `

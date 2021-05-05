@@ -11,6 +11,12 @@ export default createGlobalStyle<GlobalProps>`
     box-sizing: border-box;
   }
 
+  html {
+    @media(min-width: 1025px) {
+      overflow: hidden;
+    }
+  }
+
   body {
     background: ${props => props.theme.colors.gray50};
     ${props => props.indice === 4 ? 'overflow: hidden' : 'overflow: scroll'}
@@ -49,5 +55,9 @@ export default createGlobalStyle<GlobalProps>`
     html {
       font-size: 87.5%;
     }
+  }
+
+  @media(min-width: 1025px) {
+    overflow: hidden;
   }
 `

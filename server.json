@@ -1,5 +1,9 @@
-{
-  "data": [
+{ "users": [
+  {
+    "name": "Lucas"
+  }
+],
+  "events": [
     {
       "id_event": 1,
       "title": "Teste de informação",

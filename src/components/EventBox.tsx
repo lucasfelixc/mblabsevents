@@ -3,23 +3,29 @@ import ptBR from 'date-fns/locale/pt-BR'
 
 import { Container } from '@styles/components/EventBox'
 
-import events from '../../events.json'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { DetailsContext } from 'context/DetailsContext'
+import { api } from 'services/api'
 
 interface EventBoxShow {
   show: boolean
 }
 
 export const EventBox: React.FC<EventBoxShow> = ({ show }) => {
+  const [ events, setEvents ] = useState([])
+
   const { changeIndice } = useContext(DetailsContext)
 
-  const eventsData = events.data
+  useEffect(() => {
+    api.get('events').then(response => {
+      setEvents(response.data)
+    })
+  }, [])
 
   return (
     <Container show={show}>
 
-      {eventsData.map((value, index) => {
+      {events.map((value, index) => {
         return (
           <div className="box" key={index} onClick={() => changeIndice(Number(value.id_event))}>
             <div className="wrapperBanner">

@@ -23,11 +23,22 @@ export const Container = styled.div<ShowContainer>`
 
     margin-bottom: 2rem;
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    transition: 0.35s;
+
+    :hover {
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
     .wrapperBanner {
       width: 100%;
-      /* height: 30%; */
       height: 6rem;
-      /* background: url('/images/backgroundBox.png') no-repeat bottom right; */
 
       border-radius: 10px 10px 0 0;
 
@@ -111,6 +122,47 @@ export const Container = styled.div<ShowContainer>`
     .details {
       display: flex;
       flex-direction: column;
+    }
+
+    @media(min-width: 480px) {
+      > h2 {
+        font-size: 1.5rem;
+      }
+
+      .infos {
+        .online, .free {
+          font-size: 1.1rem;
+          width: 8rem;
+          height: 1.7rem;
+        }
+      }
+    }
+  }
+
+  @media(min-width: 600px) {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.5rem;
+    justify-items: center;
+
+    margin-bottom: 2rem;
+
+    .box {
+      height: 17rem;
+      margin: 0;
+
+      .infos {
+        .online, .free {
+          font-size: 0.9rem;
+          width: 6rem;
+          height: 1.5rem;
+        }
+      }
+
+      > h2 {
+        font-size: 1.2rem;
+      }
     }
   }
 `

@@ -5,7 +5,7 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 
   position: fixed;
@@ -22,6 +22,15 @@ export const Container = styled.div<ContainerProps>`
   align-items: center;
 
   ${props => props.indice != 0 ? 'display: flex;' : 'display: none;'}
+
+  @media(min-width: 1025px) {
+    display: flex;
+
+    width: 30%;
+
+    backdrop-filter: none;
+    position: inherit;
+  }
 `
 
 export const Overlay = styled.div`
@@ -161,6 +170,96 @@ export const Overlay = styled.div`
 
       color: ${props => props.theme.colors.gray50};
       font: 600 1.1rem Lexend, sans-serif;
+    }
+  }
+
+  @media(min-width: 1025px) {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 0;
+    box-shadow: none;
+
+    background: ${props => props.theme.colors.purple800};
+
+    overflow: hidden;
+
+    header {
+      width: 100%;
+      height: 30%;
+
+      .glass {
+        background: linear-gradient(180deg, rgba(130, 87, 229, 0) 0%, #6F48C9 100%);
+      }
+    }
+
+    main {
+      width: 100%;
+      height: 65%;
+
+      .title {
+        width: 100%;
+
+        > h2 {
+          color: ${props => props.theme.colors.gray50};
+          padding-left: 1.5rem;
+        }
+
+        .contentTitle {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          width: 100%;
+
+          h1 {
+            font: 500 1.5rem Lexend, sans-serif;
+            color: ${props => props.theme.colors.gray50};
+            width: 12rem;
+          }
+        }
+      }
+
+      .description {
+        > strong {
+          color: ${props => props.theme.colors.gray100}
+        }
+
+        > p {
+          color: ${props => props.theme.colors.gray200}
+        }
+        .callEvent {
+          width: 100%;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          > p {
+            font: 400 1.2rem Inter, sans-serif;
+            color: ${props => props.theme.colors.purple300};
+          }
+        }
+      }
+    }
+
+    footer {
+      button {
+        background: ${props => props.theme.colors.purple500};
+        margin-bottom: 2rem;
+      }
+
+      .logoBottom {
+        img {
+          width: 7rem;
+          height: 2.3rem;
+        }
+      }
     }
   }
 `

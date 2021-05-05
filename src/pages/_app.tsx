@@ -23,7 +23,6 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <title>MB Labs Events</title>
       </Head>
 
-
       <ThemeProvider theme={theme}>
 
         <Provider session={pageProps.session}>

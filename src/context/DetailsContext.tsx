@@ -1,21 +1,4 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
-
-import events from '../../events.json'
-
-interface EventsDataTypes {
-  id_event: number;
-  title: string;
-  description: string;
-  start_date: string;
-  end_date: string;
-  online: boolean;
-  free: boolean;
-  type: string;
-  state: string;
-  city: string;
-  place: string;
-  banner: string;
-}
+import { createContext, ReactNode, useState } from "react";
 
 interface DetailsContextData {
   indice: number;
