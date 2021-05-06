@@ -5,7 +5,6 @@ import { EventBox } from './EventBox'
 import { Container } from '@styles/components/Main'
 
 export const Main: React.FC = () => {
-  const showBoxs = true
   const display = true
 
   return (
@@ -17,8 +16,7 @@ export const Main: React.FC = () => {
 
       <SearchBox />
 
-      {!showBoxs && <p>Quer encontrar algum evento? Preencha acima informações sobre ele.</p>}
-      <EventBox show={showBoxs}/>
+      <EventBox />
     </Container>
   )
 }

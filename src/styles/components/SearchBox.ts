@@ -49,7 +49,6 @@ export const Container = styled.div`
     width: 85%;
     height: 2.4rem;
 
-    /* background: ${props => props.theme.colors.purple500}; */
     background: linear-gradient(90deg, #8257E5 0%, #784AE2 100%);
     font: 600 1.2rem Inter, sans-serif;
     color: ${props => props.theme.colors.gray50};
@@ -66,8 +65,6 @@ export const Container = styled.div`
       width: 1.2rem;
       height: 1.2rem;
     }
-
-    /* transition: 0.2s; */
 
     :hover {
       background: ${props => props.theme.colors.purple500};

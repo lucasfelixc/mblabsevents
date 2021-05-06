@@ -18,8 +18,6 @@ export function DetailsProvider({ children }: DetailsProviderProps) {
 
   function changeIndice(index: number) {
     setIndice(index)
-    console.log(indice)
-    console.log('Cheguei no contexto')
   }
 
   function closeDetails() {

@@ -13,9 +13,11 @@ import { Provider } from 'next-auth/client'
 import { Header } from 'components/Header'
 import { Details } from 'components/Details'
 import { useContext } from 'react'
+import { EventsContext, EventsProvider } from 'context/EventsContext'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const { indice } = useContext(DetailsContext)
+  const { dataEvents } = useContext(EventsContext)
 
   return (
     <Container>
@@ -27,14 +29,16 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
         <Provider session={pageProps.session}>
           <DetailsProvider indice={indice}>
-            <Wrapper>
-              <main>
-                <Header />
-                <Component {...pageProps} />
-                <GlobalStyle indice={indice}/>
-              </main>
-              <Details />
-            </Wrapper>
+            <EventsProvider dataEvents={dataEvents}>
+              <Wrapper>
+                <main>
+                  <Header />
+                  <Component {...pageProps} />
+                  <GlobalStyle indice={indice}/>
+                </main>
+                <Details />
+              </Wrapper>
+            </EventsProvider>
           </DetailsProvider>
         </Provider>
 

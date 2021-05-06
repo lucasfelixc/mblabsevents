@@ -1,15 +1,24 @@
 import { Container } from '@styles/components/SearchBox'
-import { useEffect, useState } from 'react'
+import { EventsContext } from 'context/EventsContext'
+import { useContext, useState } from 'react'
 
 import states from '../../states.json'
 
 export const SearchBox: React.FC = () => {
+  const { editTitle, editType, editState } = useContext(EventsContext)
+
   const [ nameEvent, setNameEvent ] = useState('')
   const [ typeEvent, setTypeEvent ] = useState('')
   const [ stateEvent, setStateEvent ] = useState('')
   const [ dateEvent, setDateEvent ] = useState('')
 
   const listOfState = states.data
+
+  function handleSetData() {
+    editTitle(nameEvent)
+    editType(typeEvent)
+    editState(stateEvent)
+  }
 
   return (
     <Container>
@@ -27,7 +36,7 @@ export const SearchBox: React.FC = () => {
         id="typeOfEvent"
         onChange={(ev) => setTypeEvent(ev.target.value)}
       >
-        <option value="default"> Tipo do evento</option>
+        <option value=""> Tipo do evento</option>
         <option value="allTypes">Todos os tipos</option>
         <option value="academic">Acadêmico - Seminário/Palestra</option>
         <option value="company">Empresas</option>
@@ -38,7 +47,7 @@ export const SearchBox: React.FC = () => {
         id="stateOfEvent"
         onChange={(ev) => setStateEvent(ev.target.value)}
       >
-        <option value="default">Estado do evento</option>
+        <option value="">Estado do evento</option>
         <option value="allStates">Todos os estados</option>
 
         {listOfState.map((value, index) => {
@@ -54,14 +63,14 @@ export const SearchBox: React.FC = () => {
         id="dateOfEvent"
         onChange={(ev) => setDateEvent(ev.target.value)}
       >
-        <option value="default"> Data do evento </option>
+        <option value=""> Data do evento </option>
         <option value="allDates">Todas as datas</option>
         <option value="nextWeek">Próxima semana</option>
         <option value="month">Esse mês</option>
         <option value="nextMonth">Próximo mês</option>
       </select>
 
-      <button type="button">
+      <button type="button" onClick={handleSetData}>
         <img src="/icons/search.svg" alt="Buscar"/>
         Buscar
       </button>

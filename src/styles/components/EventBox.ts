@@ -1,13 +1,9 @@
 import styled from "styled-components";
 
-interface ShowContainer {
-  show: boolean
-}
-
-export const Container = styled.div<ShowContainer>`
+export const Container = styled.div`
   width: 100%;
 
-  ${props => props.show ? `display: flex` : `display: none`};
+  display: flex;
   flex-direction: column;
   align-items: center;
 
@@ -136,6 +132,19 @@ export const Container = styled.div<ShowContainer>`
           height: 1.7rem;
         }
       }
+    }
+  }
+
+  .contentNoEvent {
+    width: 89%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .noEvent {
+      font: 400 1rem Inter, sans-serif;
+      color: ${props => props.theme.colors.gray200};
     }
   }
 

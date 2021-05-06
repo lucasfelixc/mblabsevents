@@ -41,7 +41,7 @@ export const Details: React.FC = () => {
             {indice != 0 ? (
               <h2>
                 {events.map((value) => {
-                  if (value.id_event === indice) {
+                  if (value.id === indice) {
                     return value.title
                   }
                 })}
@@ -62,7 +62,7 @@ export const Details: React.FC = () => {
                   <img src="/icons/calendar.svg" alt="Calendário"/>
 
                   {events.map((value) => {
-                    if (value.id_event === indice) {
+                    if (value.id === indice) {
                       return format(new Date(value.start_date), 'EEEEEE, d MMMM', {
                         locale: ptBR,
                       })
@@ -80,7 +80,7 @@ export const Details: React.FC = () => {
                   <img src="/icons/clock.svg" alt="Relógio"/>
 
                   {events.map((value) => {
-                    if (value.id_event === indice) {
+                    if (value.id === indice) {
                       return format(new Date(value.start_date), 'HH:mm', {
                         locale: ptBR,
                       })
@@ -100,7 +100,7 @@ export const Details: React.FC = () => {
                 <strong>Descrição</strong>
                 <p>
                   {events.map((value) => {
-                    if (value.id_event === indice) {
+                    if (value.id === indice) {
                       return value.description
                     }
                   })}
