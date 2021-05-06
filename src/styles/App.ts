@@ -10,7 +10,11 @@ export const Wrapper = styled.div`
   justify-content: center;
 
   main {
-    flex: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
     @media(min-width: 1025px) {
       width: 70%;

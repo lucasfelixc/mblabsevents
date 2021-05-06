@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  height: 100%;
+
   display: flex;
+
   flex-direction: column;
   align-items: center;
 
@@ -17,16 +20,18 @@ export const Container = styled.div`
     }
   }
 
-  .padlock {
-    margin: 3rem 0 1.5rem 0;
-  }
-
   .optionsAuth {
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    margin-top: 3rem;
+
     width: 100%;
+
+    .padlock {
+      margin: 3rem 0 1.5rem 0;
+    }
 
     span {
       color: ${props => props.theme.colors.gray200};
