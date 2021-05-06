@@ -176,6 +176,7 @@ export const Overlay = styled.div`
   @media(min-width: 1025px) {
     width: 100%;
     height: 100vh;
+    max-width: none;
 
     display: flex;
     flex-direction: column;

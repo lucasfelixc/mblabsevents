@@ -44,8 +44,23 @@ export const Container = styled.div<ShowDisplay>`
   }
 
   @media(min-width: 1025px) {
+    width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
     height: 90vh;
+
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      border: 1px solid ${props => props.theme.colors.gray50};
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: ${props => props.theme.colors.gray200};
+      border-radius: 10px;
+    }
   }
 `

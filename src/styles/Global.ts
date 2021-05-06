@@ -20,6 +20,10 @@ export default createGlobalStyle<GlobalProps>`
   body {
     background: ${props => props.theme.colors.gray50};
     ${props => props.indice === 4 ? 'overflow: hidden' : 'overflow: scroll'}
+
+    @media(min-width: 1025px) {
+      overflow: hidden;
+    }
   }
 
   body, input, textarea, button {
@@ -55,9 +59,5 @@ export default createGlobalStyle<GlobalProps>`
     html {
       font-size: 87.5%;
     }
-  }
-
-  @media(min-width: 1025px) {
-    overflow: hidden;
   }
 `
