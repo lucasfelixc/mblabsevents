@@ -21,6 +21,10 @@ export const Details: React.FC = () => {
     })
   }, [])
 
+  function handleAddEvent() {
+    closeDetails()
+  }
+
   return (
     <Container indice={indice}>
       <Overlay>
@@ -130,11 +134,9 @@ export const Details: React.FC = () => {
 
               {
                 session && (
-                  <Link href="payment">
-                    <button type="button" onClick={closeDetails}>
-                      Participar
-                    </button>
-                  </Link>
+                  <button type="button" onClick={handleAddEvent}>
+                    Participar
+                  </button>
                 )
               }
             </>

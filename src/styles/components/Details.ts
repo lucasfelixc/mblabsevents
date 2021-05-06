@@ -84,6 +84,7 @@ export const Overlay = styled.div`
   }
 
   main {
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;

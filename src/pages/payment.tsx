@@ -1,7 +1,21 @@
 import { useSession } from 'next-auth/client'
+import { useEffect } from 'react'
+import { api } from 'services/api'
 
 export default function Payment() {
-  const [session] = useSession()
+  const [ session ] = useSession()
+
+  async function addUser() {
+    await api.post('users/', {
+      name: session.user.name,
+      email: session.user.email,
+      event: []
+    })
+  }
+
+  useEffect(() => {
+    session ? addUser() : console.log(session)
+  }, [session])
 
   return (
     <>

@@ -1,10 +1,11 @@
-// import { GoogleLogin } from 'react-google-login'
 import { signIn, useSession } from 'next-auth/client'
 
 import { Container } from '@styles/components/Autentication'
 
 export const Autentication: React.FC = () => {
   const [ session ] = useSession()
+
+  console.log(session)
 
   return (
     <Container>

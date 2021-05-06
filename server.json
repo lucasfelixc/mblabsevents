@@ -1,8 +1,53 @@
-{ "users": [
-  {
-    "name": "Lucas"
-  }
-],
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Lucas Felix",
+      "email": "felcklucs@gmail.com",
+      "events": [
+        {
+          "id": 1,
+          "name": "Teste de informação"
+        }
+      ]
+    },
+    {
+      "name": "Lucas Felix",
+      "email": "felcklucs@gmail.com",
+      "event": [],
+      "id": 2
+    },
+    {
+      "name": "Lucas Felix",
+      "email": "felcklucs@gmail.com",
+      "event": [],
+      "id": 3
+    },
+    {
+      "name": "Lucas Felix",
+      "email": "felcklucs@gmail.com",
+      "event": [],
+      "id": 4
+    },
+    {
+      "name": "Lucas Felix",
+      "email": "felcklucs@gmail.com",
+      "event": [],
+      "id": 5
+    },
+    {
+      "name": "Lucas Felix",
+      "email": "felcklucs@gmail.com",
+      "event": [],
+      "id": 6
+    },
+    {
+      "name": "Lucas Felix",
+      "email": "felcklucs@gmail.com",
+      "event": [],
+      "id": 7
+    }
+  ],
   "events": [
     {
       "id": 1,
