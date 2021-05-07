@@ -1,51 +1,36 @@
 {
   "users": [
     {
-      "id": 1,
       "name": "Lucas Felix",
-      "email": "felcklucs@gmail.com",
-      "events": [
+      "email": "lucasfelixdev@gmail.com",
+      "event": [
         {
-          "id": 1,
           "name": "Teste de informação"
+        },
+        {
+          "name": "Evento 2"
+        },
+        {
+          "name": "Desenvolvimento web em 2021"
         }
-      ]
+      ],
+      "id": 1
     },
     {
       "name": "Lucas Felix",
       "email": "felcklucs@gmail.com",
-      "event": [],
+      "event": [
+        {
+          "name": "Teste de informação"
+        },
+        {
+          "name": "Desenvolvimento web em 2021"
+        },
+        {
+          "name": "Evento 2"
+        }
+      ],
       "id": 2
-    },
-    {
-      "name": "Lucas Felix",
-      "email": "felcklucs@gmail.com",
-      "event": [],
-      "id": 3
-    },
-    {
-      "name": "Lucas Felix",
-      "email": "felcklucs@gmail.com",
-      "event": [],
-      "id": 4
-    },
-    {
-      "name": "Lucas Felix",
-      "email": "felcklucs@gmail.com",
-      "event": [],
-      "id": 5
-    },
-    {
-      "name": "Lucas Felix",
-      "email": "felcklucs@gmail.com",
-      "event": [],
-      "id": 6
-    },
-    {
-      "name": "Lucas Felix",
-      "email": "felcklucs@gmail.com",
-      "event": [],
-      "id": 7
     }
   ],
   "events": [

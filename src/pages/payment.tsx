@@ -1,4 +1,5 @@
 import { useSession } from 'next-auth/client'
+import Router from 'next/router'
 import { useEffect } from 'react'
 import { api } from 'services/api'
 
@@ -15,12 +16,11 @@ export default function Payment() {
 
   useEffect(() => {
     session ? addUser() : console.log(session)
+    Router.push("/")
   }, [session])
 
   return (
     <>
-      {!session && <h1>Você não está logado</h1>}
-      {session && <h1>Hello {session.user.name}</h1>}
     </>
   )
 }

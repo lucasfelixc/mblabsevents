@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "server": "json-server server.json -w -d 750 -p 3333"
+    "server": "json-server server.json -w -d 750 -p 3333 --routes routes.json"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -21,7 +21,6 @@
     "styled-components": "^5.2.3"
   },
   "devDependencies": {
-    "@types/next-auth": "^3.15.0",
     "@types/node": "^15.0.1",
     "@types/react": "^17.0.4",
     "@types/react-dom": "^17.0.3",

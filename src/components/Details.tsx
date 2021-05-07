@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useSession } from 'next-auth/client'
+import Router from 'next/router'
 
 import format from 'date-fns/format'
 import ptBR from 'date-fns/locale/pt-BR'
@@ -9,21 +10,68 @@ import { Container, Overlay } from '@styles/components/Details'
 import { DetailsContext } from 'context/DetailsContext'
 
 import { api } from '../services/api'
+import { EventsContext } from 'context/EventsContext'
 
 export const Details: React.FC = () => {
   const [ events, setEvents ] = useState([])
   const [ session ] = useSession()
   const { indice, closeDetails } = useContext(DetailsContext)
+  const { nameEvent } = useContext(EventsContext)
+  const [ oldData, setOldData ] = useState([])
 
   useEffect(() => {
     api.get('events').then(response => {
       setEvents(response.data)
     })
+
+    console.log(oldData)
   }, [])
 
-  function handleAddEvent() {
+  async function handleAddEvent() {
     closeDetails()
+    await api.get(`users?email=${session.user.email}`)
+      .then(response => {
+
+        if (response.data.length === 0) {
+          Router.push("/payment")
+          setOldData(response.data)
+
+        } else {
+          setOldData(response.data)
+
+        }
+
+      })
+
+
+    showData()
+
+    oldData.map(async (value) => {
+      await api.put(`users/${value.id}`, {
+        name: value.name,
+        email: value.email,
+        event: value.event
+      })
+    })
+
   }
+
+  function showData() {
+    events.map((value) => {
+      if (value.id === indice) {
+        return oldData.filter((valueFilter) => {
+          valueFilter.event.push({ name: value.title })
+        })
+      }
+    })
+  }
+
+  // function clearEvents() {
+  //   oldData.map(value => {
+  //     return value.event = []
+  //   })
+  // }
+
 
   return (
     <Container indice={indice}>

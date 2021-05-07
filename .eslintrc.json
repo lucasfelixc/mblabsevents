@@ -9,7 +9,7 @@
       "plugin:react/recommended",
       "standard",
       "plugin:@typescript-eslint/recommended",
-      "prettier/@typescript-eslint",
+      "prettier",
       "prettier/standard",
       "prettier/react",
       "plugin:react-hooks/recommended"
