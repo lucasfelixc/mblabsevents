@@ -21,6 +21,12 @@
         }
       ],
       "id": 1
+    },
+    {
+      "name": "Lucas Felix",
+      "email": "lucas.felixct@gmail.com",
+      "event": [],
+      "id": 2
     }
   ],
   "events": [
@@ -36,7 +42,7 @@
       "state": "Paraíba",
       "city": "João Pessoa",
       "place": "Universidade Federal da Paraíba - Centro de Informática",
-      "background":"https://storage.cloud.google.com/mblabsevents/inteligenciaEmocionalG.png",
+      "background": "https://storage.cloud.google.com/mblabsevents/inteligenciaEmocionalG.png",
       "banner": "https://storage.cloud.google.com/mblabsevents/inteligenciaEmocional.png"
     },
     {
@@ -51,7 +57,7 @@
       "state": "Paraíba",
       "city": "João Pessoa",
       "place": "Universidade Federal da Paraíba - Centro de Informática",
-      "background":"https://storage.cloud.google.com/mblabsevents/empresadigitalG.png",
+      "background": "https://storage.cloud.google.com/mblabsevents/empresadigitalG.png",
       "banner": "https://storage.cloud.google.com/mblabsevents/empresadigitalP.png"
     },
     {
@@ -66,7 +72,7 @@
       "state": "Paraíba",
       "city": "João Pessoa",
       "place": "Universidade Federal da Paraíba - Centro de Informática",
-      "background":"https://storage.cloud.google.com/mblabsevents/ci.png",
+      "background": "https://storage.cloud.google.com/mblabsevents/ci.png",
       "banner": "https://storage.cloud.google.com/mblabsevents/backgroundBox.png"
     },
     {
@@ -81,7 +87,7 @@
       "state": "Paraíba",
       "city": "João Pessoa",
       "place": "Universidade Federal da Paraíba - Centro de Informática",
-      "background":"https://storage.cloud.google.com/mblabsevents/tecnologiaG.png",
+      "background": "https://storage.cloud.google.com/mblabsevents/tecnologiaG.png",
       "banner": "https://storage.cloud.google.com/mblabsevents/tecnologiaP.png"
     },
     {
