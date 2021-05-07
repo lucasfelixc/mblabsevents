@@ -58,7 +58,7 @@ export const EventBox: React.FC = () => {
                 }}
               >
                 <div className="wrapperBanner">
-                  <img src="/images/backgroundBox.png" alt="Centro de informática"/>
+                  <img src={value.banner} alt="Centro de informática"/>
                 </div>
 
                 <div className="infos">

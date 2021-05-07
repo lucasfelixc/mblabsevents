@@ -54,6 +54,8 @@ export const Details: React.FC = () => {
       })
     })
 
+    console.log(oldData[0])
+
   }
 
   function showData() {
@@ -66,25 +68,22 @@ export const Details: React.FC = () => {
     })
   }
 
-  // function clearEvents() {
-  //   oldData.map(value => {
-  //     return value.event = []
-  //   })
-  // }
-
-
   return (
     <Container indice={indice}>
       <Overlay>
         <header>
-          {indice != 0 && (
-            <>
-              <button type="button" className="close" onClick={closeDetails}>
-                <img src="/icons/close.svg" alt="Fechar"/>
-              </button>
-              <img src="/images/ci.png" alt="Background"/>
-            </>
-          )}
+          {events.map((value) => {
+            if (value.id === indice) {
+              return (
+              <>
+                <button type="button" className="close" onClick={closeDetails}>
+                  <img src="/icons/close.svg" alt="Fechar"/>
+                </button>
+                <img src={value.background} alt="Background"/>
+              </>
+              )}
+          })}
+
           <div className="glass" />
         </header>
 

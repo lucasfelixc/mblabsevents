@@ -2,8 +2,14 @@
   "users": [
     {
       "name": "Lucas Felix",
-      "email": "lucasfelixdev@gmail.com",
+      "email": "felcklucs@gmail.com",
       "event": [
+        {
+          "name": "Teste de informação"
+        },
+        {
+          "name": "Teste de informação"
+        },
         {
           "name": "Teste de informação"
         },
@@ -15,52 +21,38 @@
         }
       ],
       "id": 1
-    },
-    {
-      "name": "Lucas Felix",
-      "email": "felcklucs@gmail.com",
-      "event": [
-        {
-          "name": "Teste de informação"
-        },
-        {
-          "name": "Desenvolvimento web em 2021"
-        },
-        {
-          "name": "Evento 2"
-        }
-      ],
-      "id": 2
     }
   ],
   "events": [
     {
       "id": 1,
-      "title": "Teste de informação",
-      "description": "O centro de informática da Universidade promoverá um evento que terá como objetivo discutir sobre a ascenção dos desenvolvedores web em 2021 e o que é esperado dessa profissão nos próximos anos.",
-      "start_date": "2021-04-30T09:00",
-      "end_date": "2021-05-02T14:30",
-      "online": true,
+      "title": "Congresso de inteligência emocional",
+      "description": "O curso de Psicologia da Universidade Federal da Paraíba vai promover um congresso sobre a importância da inteligência emocional no mercado de trabalho.",
+      "start_date": "2021-06-30T09:00",
+      "end_date": "2021-07-02T14:30",
+      "online": false,
       "free": true,
       "type": "academic",
       "state": "Paraíba",
       "city": "João Pessoa",
       "place": "Universidade Federal da Paraíba - Centro de Informática",
-      "banner": null
+      "background":"https://storage.cloud.google.com/mblabsevents/inteligenciaEmocionalG.png",
+      "banner": "https://storage.cloud.google.com/mblabsevents/inteligenciaEmocional.png"
     },
     {
       "id": 2,
-      "title": "Evento 2",
-      "description": "O centro de informática da Universidade promoverá um evento que terá como objetivo discutir sobre a ascenção dos desenvolvedores web em 2021 e o que é esperado dessa profissão nos próximos anos.",
+      "title": "A ascensão das empresas digitais",
+      "description": "Um grupo de empreendedores digitais irá promover uma mesa redonda para conversar sobre um dos assuntos mais pertinentes dos últimos anos.",
       "start_date": "2021-04-30T11:00",
       "end_date": "2021-05-02T14:30",
       "online": true,
       "free": true,
-      "type": "academic",
+      "type": "company",
       "state": "Paraíba",
       "city": "João Pessoa",
       "place": "Universidade Federal da Paraíba - Centro de Informática",
-      "banner": null
+      "background":"https://storage.cloud.google.com/mblabsevents/empresadigitalG.png",
+      "banner": "https://storage.cloud.google.com/mblabsevents/empresadigitalP.png"
     },
     {
       "id": 3,
@@ -74,12 +66,13 @@
       "state": "Paraíba",
       "city": "João Pessoa",
       "place": "Universidade Federal da Paraíba - Centro de Informática",
-      "banner": null
+      "background":"https://storage.cloud.google.com/mblabsevents/ci.png",
+      "banner": "https://storage.cloud.google.com/mblabsevents/backgroundBox.png"
     },
     {
       "id": 4,
-      "title": "Desenvolvimento web em 2021",
-      "description": "O centro de informática da Universidade promoverá um evento que terá como objetivo discutir sobre a ascenção dos desenvolvedores web em 2021 e o que é esperado dessa profissão nos próximos anos.",
+      "title": "XV Congresso de tecnologia",
+      "description": "Um dos principais eventos de tecnologia do mundo terá mais uma edição em 2021 para discutir tudo sobre o mundo da tecnologia.",
       "start_date": "2021-04-30T09:00",
       "end_date": "2021-05-02T14:30",
       "online": true,
@@ -88,12 +81,13 @@
       "state": "Paraíba",
       "city": "João Pessoa",
       "place": "Universidade Federal da Paraíba - Centro de Informática",
-      "banner": null
+      "background":"https://storage.cloud.google.com/mblabsevents/tecnologiaG.png",
+      "banner": "https://storage.cloud.google.com/mblabsevents/tecnologiaP.png"
     },
     {
       "id": 5,
-      "title": "Desenvolvimento web em 2021",
-      "description": "O centro de informática da Universidade promoverá um evento que terá como objetivo discutir sobre a ascenção dos desenvolvedores web em 2021 e o que é esperado dessa profissão nos próximos anos.",
+      "title": "III Congresso de machine learning",
+      "description": "Um dos termos mais comentados nos últimos tempos será discutido na terceira edição do congresso de machine learning.",
       "start_date": "2021-04-30T09:00",
       "end_date": "2021-05-02T14:30",
       "online": true,
@@ -102,26 +96,28 @@
       "state": "Paraíba",
       "city": "João Pessoa",
       "place": "Universidade Federal da Paraíba - Centro de Informática",
-      "banner": null
+      "background": "https://storage.cloud.google.com/mblabsevents/machinelearningG.png",
+      "banner": "https://storage.cloud.google.com/mblabsevents/machinelearningP.png"
     },
     {
       "id": 6,
-      "title": "Desenvolvimento web em 2021",
-      "description": "O centro de informática da Universidade promoverá um evento que terá como objetivo discutir sobre a ascenção dos desenvolvedores web em 2021 e o que é esperado dessa profissão nos próximos anos.",
+      "title": "Start-up: o futuro das ideias",
+      "description": "Uma boa ideia pode se transformar em um negócio milionário. Tudo sobre esse mundo que são as empresas inovadoras será discutido no congresso.",
       "start_date": "2021-04-30T09:00",
       "end_date": "2021-05-02T14:30",
       "online": true,
-      "free": true,
-      "type": "academic",
+      "free": false,
+      "type": "company",
       "state": "Paraíba",
       "city": "João Pessoa",
       "place": "Universidade Federal da Paraíba - Centro de Informática",
-      "banner": null
+      "background": "https://storage.cloud.google.com/mblabsevents/startupG.png",
+      "banner": "https://storage.cloud.google.com/mblabsevents/startupP.png"
     },
     {
       "id": 7,
-      "title": "Desenvolvimento web em 2021",
-      "description": "O centro de informática da Universidade promoverá um evento que terá como objetivo discutir sobre a ascenção dos desenvolvedores web em 2021 e o que é esperado dessa profissão nos próximos anos.",
+      "title": "Data science: os dados milionários",
+      "description": "As grandes empresas descobriram o valor que os dados têm, profissionais que sabem lidar com eles são cada vez mais disputados por elas.",
       "start_date": "2021-04-30T09:00",
       "end_date": "2021-05-02T14:30",
       "online": true,
@@ -130,35 +126,38 @@
       "state": "Paraíba",
       "city": "João Pessoa",
       "place": "Universidade Federal da Paraíba - Centro de Informática",
-      "banner": null
+      "background": "https://storage.cloud.google.com/mblabsevents/datascienceG.png",
+      "banner": "https://storage.cloud.google.com/mblabsevents/datascienceP.png"
     },
     {
       "id": 8,
-      "title": "Desenvolvimento web em 2021",
-      "description": "O centro de informática da Universidade promoverá um evento que terá como objetivo discutir sobre a ascenção dos desenvolvedores web em 2021 e o que é esperado dessa profissão nos próximos anos.",
+      "title": "Congresso de investimento anjo",
+      "description": "Como se tornar um investidor anjo de sucesso, podendo ter a visão estratégica de qual negócio vale o investimento e quais ainda precisam ser lapidados. Essa será a discussão no maior congresso de investidores anjo do Brasil.",
       "start_date": "2021-04-30T09:00",
       "end_date": "2021-05-02T14:30",
-      "online": true,
-      "free": true,
-      "type": "academic",
-      "state": "Paraíba",
-      "city": "João Pessoa",
-      "place": "Universidade Federal da Paraíba - Centro de Informática",
-      "banner": null
+      "online": false,
+      "free": false,
+      "type": "company",
+      "state": "São Paulo",
+      "city": "São Paulo",
+      "place": "Universidade de São Paulo",
+      "background": "https://storage.cloud.google.com/mblabsevents/investimentoG.png",
+      "banner": "https://storage.cloud.google.com/mblabsevents/investimentoP.png"
     },
     {
       "id": 9,
-      "title": "Desenvolvimento web em 2021",
+      "title": "Do estágio à diretoria",
       "description": "O centro de informática da Universidade promoverá um evento que terá como objetivo discutir sobre a ascenção dos desenvolvedores web em 2021 e o que é esperado dessa profissão nos próximos anos.",
       "start_date": "2021-04-30T09:00",
       "end_date": "2021-05-02T14:30",
       "online": true,
       "free": true,
-      "type": "academic",
+      "type": "company",
       "state": "Paraíba",
       "city": "João Pessoa",
       "place": "Universidade Federal da Paraíba - Centro de Informática",
-      "banner": null
+      "background": "https://storage.cloud.google.com/mblabsevents/estagioG.png",
+      "banner": "https://storage.cloud.google.com/mblabsevents/estagioP.png"
     }
   ]
 }
